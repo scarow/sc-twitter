@@ -7,7 +7,13 @@ class HomeController < ApplicationController
   def get_tweets
     # return error if no handle
     handle = params[:handle]
-    @tweets = $client.user_timeline(handle, count: 25)
+    @tweets = []
+    begin
+      @tweets = $client.user_timeline(handle, count: 25)
+    rescue Exception => e
+      flash[:error] = e.message
+    end
+
     render 'index'
   end
 end

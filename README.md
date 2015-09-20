@@ -1,9 +1,12 @@
 # sc-twitter
 
 ## Brief walkthrough of app design / choices made
+
+
 ## Local environment setup instructions
 - run `rake db:setup`
 - run `rake db:migrate`
+
 ## Basic Heroku deployment instructions
 - Install the heroku toolbelt
 - run `heroku login`

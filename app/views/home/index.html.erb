@@ -1,3 +1,9 @@
+<div style='color:red'>
+  <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class: "flash #{key}" %>
+  <% end %>
+</div>
+
 <%= form_tag(controller: 'home', action: 'get_tweets') do %>
   <p>
     <%= label_tag "Handle:" %><br>
