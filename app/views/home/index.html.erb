@@ -8,14 +8,13 @@
       <%= label_tag "Handle:" %><br>
       <%= text_field_tag :handle %>
     </p>
-    <p>
       <%= submit_tag "Get Tweets"%>
     </p>
   <% end %>
 
-  <ul>
+  <ul class="list-group">
   <% @tweets.each do |tweet| %>
-    <li>
+    <li class="list-group-item">
       <%= tweet.text %>
     </li>
   <% end %>
