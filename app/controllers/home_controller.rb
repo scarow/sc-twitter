@@ -2,6 +2,7 @@ class HomeController < ApplicationController
 
   def initialize
     @tweets = []
+    super
   end
 
   def index
