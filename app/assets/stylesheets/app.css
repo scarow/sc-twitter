@@ -1,0 +1,32 @@
+.pretty-border {
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 52px -17px rgba(0,0,0,0.84);
+  -moz-box-shadow: 10px 10px 52px -17px rgba(0,0,0,0.84);
+  box-shadow: 10px 10px 52px -17px rgba(0,0,0,0.84);
+  border: 2px solid white;
+}
+
+.page-header.bs-override {
+  padding: 10px;
+  margin: 15px 0px 0px 0px;
+}
+
+.tweet-wrapper {
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 52px -17px rgba(0,0,0,0.84);
+  -moz-box-shadow: 10px 10px 52px -17px rgba(0,0,0,0.84);
+  box-shadow: 10px 10px 52px -17px rgba(0,0,0,0.84);
+  border: 2px solid white;
+}
+
+.navbar.navbar-default{
+  background-color: #0084B4;
+}
+
+p.navbar-text.pull-right {
+  color: black;
+}
+
+.navbar-default a.navbar-link{
+  color: black;
+}
