@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'twitter'
+gem 'twitter-text'
 gem 'devise'
 
 # Use ActiveModel has_secure_password
@@ -41,6 +42,14 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # gem 'rspec-rails', '~> 3.0'
+  gem 'database_cleaner'
+  gem 'awesome_print', :require => 'ap'
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, :git => "git://github.com/rspec/#{lib}.git", :branch => 'master'
+  end
+  gem 'webmock'
+  gem 'factory_girl_rails'
 end
 
 group :development do

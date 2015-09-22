@@ -1,3 +1,50 @@
+GIT
+  remote: git://github.com/rspec/rspec-core.git
+  revision: 93e5001b5ae6b299d3efaa727884f6fbaec5b32a
+  branch: master
+  specs:
+    rspec-core (3.4.0.pre)
+      rspec-support (= 3.4.0.pre)
+
+GIT
+  remote: git://github.com/rspec/rspec-expectations.git
+  revision: 7f0d1f6a68fdfa6e8a06518a51e54833baafa2c0
+  branch: master
+  specs:
+    rspec-expectations (3.4.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.4.0.pre)
+
+GIT
+  remote: git://github.com/rspec/rspec-mocks.git
+  revision: abb875d2cc10998d407b07c93d5686675d36b61c
+  branch: master
+  specs:
+    rspec-mocks (3.4.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.4.0.pre)
+
+GIT
+  remote: git://github.com/rspec/rspec-rails.git
+  revision: c1de0e2ced37f1a005fd16948a770661d34264e6
+  branch: master
+  specs:
+    rspec-rails (3.4.0.pre)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (= 3.4.0.pre)
+      rspec-expectations (= 3.4.0.pre)
+      rspec-mocks (= 3.4.0.pre)
+      rspec-support (= 3.4.0.pre)
+
+GIT
+  remote: git://github.com/rspec/rspec-support.git
+  revision: 838e6aab14cd472e860b41503c670a6ef5cf9606
+  branch: master
+  specs:
+    rspec-support (3.4.0.pre)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -38,6 +85,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (6.0.3)
+    awesome_print (1.6.1)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -51,6 +99,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
+    database_cleaner (1.1.1)
     debug_inspector (0.0.2)
     devise (3.5.2)
       bcrypt (~> 3.0)
@@ -59,11 +110,17 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    diff-lcs (1.2.5)
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
     equalizer (0.0.10)
     erubis (2.7.0)
     execjs (2.6.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     globalid (0.3.6)
@@ -139,6 +196,7 @@ GEM
       json (~> 1.4)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    safe_yaml (1.0.4)
     sass (3.4.18)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -173,6 +231,8 @@ GEM
       memoizable (~> 0.4.0)
       naught (~> 1.0)
       simple_oauth (~> 0.3.0)
+    twitter-text (1.13.0)
+      unf (~> 0.1.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
@@ -188,23 +248,36 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    webmock (1.21.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   byebug
   coffee-rails (~> 4.1.0)
+  database_cleaner
   devise
+  factory_girl_rails
   jbuilder (~> 2.0)
   jquery-rails
   pg
   rails (= 4.2.4)
   rails_12factor (~> 0.0.2)
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
   turbolinks
   twitter
+  twitter-text
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+  webmock
