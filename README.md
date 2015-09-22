@@ -17,7 +17,7 @@
 
 ### UX/UI choices
 
-For the user flow of the app, I didn't want the user to have to click tons of buttons to navigate around; I thought it would be best to populate the tweets on the same page as the form. This way, users don't have to submit the request, get directed to a new page with tweets, and then click 'Back' to do another search. Instead, it's all there on the same page. I probably could have done this with AJAX, but routes are more 'rails-y', and are more intuitive for rails developers. One limitation is that after you do one search, you get the home/get_tweets route in your URL, so it asks about a form submit when you manually refresh the page. There is probably a way to work around this, though.
+For the user flow of the app, I didn't want the user to have to click tons of buttons to navigate around; I thought it would be best to populate the tweets on the same page as the form. This way, users don't have to submit the request, get directed to a new page with tweets, and then click 'Back' to do another search. Instead, it's all there on the same page. I probably could have done this with AJAX, but routes are more 'rails-y'.
 
 ## Local environment setup instructions
 - run `rake db:setup`
