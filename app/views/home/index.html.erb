@@ -5,7 +5,7 @@
     </div>
 
     <%= form_tag(controller: "home", action: "get_tweets") do %>
-      <p>
+      <p class="form-handle-input">
         <%= label_tag "Handle:" %><br>
         <%= text_field_tag :handle, nil, required: true %>
       </p>

@@ -19,8 +19,14 @@
   border: 2px solid white;
 }
 
+.form-handle-input {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
 .navbar.navbar-default{
   background-color: #0084B4;
+  margin-bottom: 0px;
 }
 
 p.navbar-text.pull-right {
