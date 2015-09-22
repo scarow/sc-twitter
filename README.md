@@ -3,6 +3,7 @@
 ## Brief walkthrough of app design / choices made
 - I decided to use bootstrap for styling. I would likely never use bootstrap other than for prototyping, since it is a bulky library, but it is extremely useful for getting an app to look good in a short period of time.
 - I used the devise gem for authentication, since it's one of the most popular auth gems. It is also really easy to set up and has great documentation.
+- I added tweet caching using Rails' low-level caching, as there's no need to store API responses in my DB (for now). API responses are commonly cached this way in Rails.
 
 For the user flow of the app, I didn't want the user to have to click tons of buttons to navigate around; I thought it would be best to populate the tweets on the same page as the form. This way, users don't have to submit the request, get directed to a new page with tweets, and then click 'Back' to do another search. Instead, it's all there on the same page. I probably could have done this with AJAX, but routes are more 'rails-y', and are more intuitive for rails developers. One limitation is that after you do one search, you get the home/get_tweets route in your URL, so it asks about a form submit when you manually refresh the page. There is probably a way to work around this, though.
 
