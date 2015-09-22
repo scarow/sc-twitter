@@ -10,14 +10,20 @@ class HomeController < ApplicationController
 
   def get_tweets
     handle = params[:handle]
+    count = 25
     begin
       @tweets = Rails.cache.fetch("#{handle}", expires_in: 5.minutes) do
-        $client.user_timeline(handle, count: 25)
+        API_user_timeline(handle, count)
       end
-    rescue Exception => e
+    rescue => e
       flash.now[:error] = e.message
     end
 
     render 'index'
+  end
+
+  def API_user_timeline(handle, count)
+    ap "*" * 100
+    $client.user_timeline(handle, count: 25)
   end
 end
