@@ -33,3 +33,4 @@ For the user flow of the app, I didn't want the user to have to click tons of bu
 - run `heroku config:set TWITTER_CONSUMER_KEY='your_twitter_consumer_key' TWITTER_CONSUMER_SECRET='your_twitter_consumer_secret' TWITTER_ACCESS_TOKEN='your_twitter_access_token' TWITTER_ACCESS_TOKEN_SECRET='your_twitter_access_token_secret'`
 
 ## Test suite setup/execution instructions (if applicable)
+- run `rspec`
