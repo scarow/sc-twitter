@@ -14,6 +14,7 @@ class HomeController < ApplicationController
       @tweets = Rails.cache.fetch("#{handle}", expires_in: 5.minutes) do
         $client.user_timeline(handle, count: 25)
       end
+      ap @tweets
     rescue Exception => e
       flash.now[:error] = e.message
     end
