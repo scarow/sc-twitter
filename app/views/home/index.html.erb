@@ -13,11 +13,13 @@
       </p>
     <% end %>
 
-    <div>
-      <% if @tweets.count > 0 %>
-        <img class="pretty-border" src="<%= @tweets.first.user.profile_image_url %>" />
-        <h2 style="display:inline"> <%= @tweets.first.user.screen_name %> </h2>
-      <% end %>
+    <div class="tweet-wrapper">
+      <div class="page-header bs-override">
+        <% if @tweets.count > 0 %>
+          <img class="pretty-border" src="<%= @tweets.first.user.profile_image_url %>" />
+          <h2 style="display:inline"> <%= @tweets.first.user.screen_name %> </h2>
+        <% end %>
+      </div>
       <ul class="list-group">
       <% @tweets.each do |tweet| %>
         <li class="list-group-item">
