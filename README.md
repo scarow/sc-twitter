@@ -27,6 +27,7 @@ For the user flow of the app, I didn't want the user to have to click tons of bu
 - Install the heroku toolbelt
 - run `heroku login`
 - run `heroku create sc-twitter`
+- run `bundle exec rake assets:precompile` (not always necessary; only when you've changed assets like css)
 - run `git push heroku master`
 - run `heroku run rake db:migrate`
 - run `heroku config:set TWITTER_CONSUMER_KEY='your_twitter_consumer_key' TWITTER_CONSUMER_SECRET='your_twitter_consumer_secret' TWITTER_ACCESS_TOKEN='your_twitter_access_token' TWITTER_ACCESS_TOKEN_SECRET='your_twitter_access_token_secret'`
