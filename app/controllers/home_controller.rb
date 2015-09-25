@@ -23,7 +23,6 @@ class HomeController < ApplicationController
   end
 
   def API_user_timeline(handle, count)
-    ap "*" * 100
     $client.user_timeline(handle, count: 25)
   end
 end
