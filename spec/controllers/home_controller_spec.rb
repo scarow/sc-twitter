@@ -28,14 +28,6 @@ RSpec.describe HomeController, :type => :controller do
       expect(Rails.cache.exist?('samcarow')).to be(true)
     end
 
-    it "should render index" do
-      params = {
-        handle: 'samcarow'
-      }
-      post :get_tweets, params
-      expect(subject).to render_template(:index)
-    end
-
     it "should not raise error on API failure" do
       Rails.cache.clear
       controller.stub(:API_user_timeline).and_raise(StandardError.new("error"))
