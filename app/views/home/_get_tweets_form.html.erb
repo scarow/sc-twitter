@@ -1,0 +1,14 @@
+ <div class="container">
+  <div style="color:red">
+    <%= content_tag :div, flash[:error] %>
+  </div>
+
+  <%= form_tag(action: "get_tweets") do %>
+    <p class="form-handle-input">
+      <%= label_tag "Handle:" %><br>
+      <%= text_field_tag :handle, nil, required: true %>
+    </p>
+      <%= submit_tag "Get Tweets"%>
+    </p>
+  <% end %>
+</div>

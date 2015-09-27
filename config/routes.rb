@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  get "home/index"
-  post "home/get_tweets"
-  get "home/get_tweets", to: "home#index", as: "home"
+  resources :home do
+    post :get_tweets, on: :collection
+  end
   root "home#index"
 end

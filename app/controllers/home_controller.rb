@@ -18,8 +18,6 @@ class HomeController < ApplicationController
     rescue => e
       flash.now[:error] = e.message
     end
-
-    render 'index'
   end
 
   def API_user_timeline(handle, count)

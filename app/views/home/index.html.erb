@@ -1,40 +1,8 @@
 <div class="jumbotron">
-  <div class="container">
-    <div style="color:red">
-      <%= content_tag :div, flash[:error] %>
-    </div>
-
-    <%= form_tag(controller: "home", action: "get_tweets") do %>
-      <p class="form-handle-input">
-        <%= label_tag "Handle:" %><br>
-        <%= text_field_tag :handle, nil, required: true %>
-      </p>
-        <%= submit_tag "Get Tweets"%>
-      </p>
-    <% end %>
-
-    <div class="tweet-wrapper">
-      <div class="page-header bs-override">
-        <% if @tweets.count > 0 %>
-          <img class="pretty-border" src="<%= @tweets.first.user.profile_image_url %>" />
-          <h2 style="display:inline"> <%= @tweets.first.user.screen_name %> </h2>
-        <% else %>
-          <h2> Enter twitter handle above! </h2>
-        <% end %>
-      </div>
-      <ul class="list-group">
-      <% @tweets.each do |tweet| %>
-        <li class="list-group-item">
-          <span class="badge has-tooltip" data-container="body" data-toggle="tooltip" title="Retweets">
-            <%= tweet.retweet_count %>
-          </span>
-          <span class="badge has-tooltip" data-container="body" data-toggle="tooltip" title="Favorites">
-            <%= tweet.favorite_count %>
-          </span>
-          <%= tweet.text %>
-        </li>
-      <% end %>
-      </ul>
+  <%= render partial: 'get_tweets_form' %>
+  <div class="tweet-wrapper">
+    <div class="page-header bs-override">
+      <h2> Enter twitter handle above! </h2>
     </div>
   </div>
 </div>
